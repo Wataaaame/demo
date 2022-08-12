@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Department List</title>
+</head>
+<body>
+    <script>
+        function del(deptno) {
+            if (window.confirm('delete?')) {
+                // 四种方式发送请求
+                // window.location
+                // window.location.href
+                // document.location
+                document.location.href = "oa/dept/delete?deptno=" + deptno;
+            }
+        }
+    </script>
+
+    <h1>Department List</h1>
+    <hr>
+
+    <a href="add.html">add</a>
+
+    <table border="1px solid black" width="90%" height="150px" align="center">
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>Department NO</th>
+                <th>Department Name</th>
+                <th>Department Location</th>
+                <th>Manufaction</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>10</td>
+                <td>XiaoShou</td>
+                <td>Beijing</td>
+                <td>
+                    <a href="javascript:void(0)" onclick="del()">delet</a>
+                    <a href="edit.html">edit</a>
+                    <a href="detail.html">detail</a>
+                </td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>YanFa</td>
+                <td>Shanghai</td>
+                <td>
+                    <a href="">delet</a>
+                    <a href="">edit</a>
+                    <a href="">detail</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
